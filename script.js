@@ -41,8 +41,10 @@ const observerOptions = {
 
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.style.animation = 'fadeInUp 1s ease forwards';
+        if (entry.isIntersecting && !entry.target.classList.contains('visible')) {
+            entry.target.classList.add('visible');
+            // 一度アニメーションが実行されたら監視を停止
+            observer.unobserve(entry.target);
         }
     });
 }, observerOptions);

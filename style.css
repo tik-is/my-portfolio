@@ -131,6 +131,12 @@ section {
     max-width: 1200px;
     margin: 0 auto;
     scroll-margin-top: 100px; /* ナビゲーションバーの高さ分のマージン */
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+section.visible {
+    animation: fadeInUp 1s ease forwards;
 }
 
 .section-title {
