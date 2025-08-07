@@ -1,0 +1,18 @@
+# Git関連
+.git
+.gitignore
+
+# ドキュメント
+README.md
+CLAUDE.md
+
+# GitHub Pages関連
+CNAME
+
+# macOS
+.DS_Store
+
+# Docker関連
+Dockerfile
+.dockerignore
+docker-compose.yml
